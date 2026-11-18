@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="1">
+            <File firstVisibleLine="203" xOffset="0" scrollWidth="1247" startPos="8696" endPos="8696" selMode="0" offset="0" wrapCount="1" lang="C++" encoding="-1" userReadOnly="no" filename="E:\CG-2026-2\LabCompiler2026_2_CG\glfw-master\OwnProjects\Project_05\main.cpp" backupFilePath="" originalFileLastModifTimestamp="343558016" originalFileLastModifTimestampHigh="31276179" tabColourId="-1" RTL="no" tabPinned="no" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="240" xOffset="0" scrollWidth="2245" startPos="9505" endPos="9505" selMode="0" offset="0" wrapCount="1" lang="C++" encoding="-1" userReadOnly="no" filename="E:\CG-2026-2\LabCompiler2026_2_CG\glfw-master\OwnProjects\Project_06\main.cpp" backupFilePath="E:\CG-2026-2\LabCompiler2026_2_CG\Editor\npp_8_9_8_portable.x64\backup\main.cpp@2026-09-07_143305" originalFileLastModifTimestamp="2617956128" originalFileLastModifTimestampHigh="31276182" tabColourId="-1" RTL="no" tabPinned="no" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no">
+                <Fold line="292" />
+            </File>
+            <File firstVisibleLine="42" xOffset="0" scrollWidth="923" startPos="1929" endPos="1810" selMode="0" offset="0" wrapCount="1" lang="CMake" encoding="-1" userReadOnly="no" filename="E:\CG-2026-2\LabCompiler2026_2_CG\glfw-master\OwnProjects\Project_06\CMakeLists.txt" backupFilePath="" originalFileLastModifTimestamp="2463858016" originalFileLastModifTimestampHigh="31276179" tabColourId="-1" RTL="no" tabPinned="no" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

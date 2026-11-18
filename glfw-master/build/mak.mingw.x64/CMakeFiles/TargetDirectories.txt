@@ -1,0 +1,14 @@
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/CMakeFiles/edit_cache.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/CMakeFiles/rebuild_cache.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/src/CMakeFiles/glfw.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/src/CMakeFiles/update_mappings.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/src/CMakeFiles/edit_cache.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/src/CMakeFiles/rebuild_cache.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/MisProjects/CMakeFiles/edit_cache.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/MisProjects/CMakeFiles/rebuild_cache.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/MisProjects/Project_01/CMakeFiles/Project_01_glfw.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/MisProjects/Project_01/CMakeFiles/edit_cache.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/MisProjects/Project_01/CMakeFiles/rebuild_cache.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/MisProjects/Project_tetris/CMakeFiles/Project_tetris_glfw.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/MisProjects/Project_tetris/CMakeFiles/edit_cache.dir
+C:/Users/Delan/Downloads/LabCompilerIHC/LabCompilerIHC/glfw-master/build/mak.mingw.x64/MisProjects/Project_tetris/CMakeFiles/rebuild_cache.dir
