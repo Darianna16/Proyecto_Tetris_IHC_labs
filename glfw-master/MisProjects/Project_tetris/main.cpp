@@ -4,11 +4,7 @@
 #include <iostream>
 #include <vector>
 
-// ---------- Constantes del tablero (compartidas con el equipo) ----------
-const unsigned SCR_W = 600, SCR_H = 800;
-const int   COLS = 10, ROWS = 20;
-const float CELL_W = 0.1f, CELL_H = 0.075f;      // celdas cuadradas en píxeles (600x800)
-const float BOARD_X0 = -0.9f, BOARD_Y0 = -0.75f; // esquina inferior izquierda
+#include "juego.h"   // constantes del tablero + lógica del juego (Persona 2)
 
 // ---------- Shaders ----------
 const char* vsSrc = R"(#version 330 core
@@ -133,6 +129,17 @@ void initBuffers() {
 }
 
 // ---------- Teclado ----------
+// Callback: GLFW lo llama en cada evento de tecla (PRESS, REPEAT y RELEASE).
+// Así las flechas se repiten al mantenerlas presionadas.
+void teclado(GLFWwindow* w, int key, int scancode, int action, int mods) {
+    teclaJuego(key, action);                       // flechas, ↑ y Espacio (Persona 2)
+    if (action == GLFW_PRESS) {                    // P y R (Persona 3 añade el feedback del panel)
+        if (key == GLFW_KEY_P && estado != GAMEOVER)
+            estado = (estado == JUGANDO) ? PAUSA : JUGANDO;
+        if (key == GLFW_KEY_R) reiniciarJuego();
+    }
+}
+
 void procesarEntrada(GLFWwindow* w) {
     if (glfwGetKey(w, GLFW_KEY_ESCAPE) == GLFW_PRESS) glfwSetWindowShouldClose(w, true);
     static bool wPrev = false;
@@ -149,10 +156,12 @@ int main() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);   // evita que las celdas se deformen
     GLFWwindow* w = glfwCreateWindow(SCR_W, SCR_H, "Tetris - Lab 7 IHC", nullptr, nullptr);
     if (!w) { std::cout << "Error ventana\n"; glfwTerminate(); return -1; }
     glfwMakeContextCurrent(w);
     if (!gladLoadGL(glfwGetProcAddress)) return -1;   // GLAD 2
+    glfwSetKeyCallback(w, teclado);
 
     unsigned int vs = compilar(GL_VERTEX_SHADER, vsSrc);
     unsigned int fs = compilar(GL_FRAGMENT_SHADER, fsSrc);
@@ -164,6 +173,7 @@ int main() {
     locSize  = glGetUniformLocation(prog, "uSize");
 
     initBuffers();
+    iniciarJuego();
 
     while (!glfwWindowShouldClose(w)) {
         procesarEntrada(w);
@@ -171,13 +181,12 @@ int main() {
         glClear(GL_COLOR_BUFFER_BIT);
         glUseProgram(prog);
 
-        // Escena de prueba (la reemplazan Persona 2 y 3)
-        dibujarCuadricula(0.35f, 0.38f, 0.42f);
-        dibujarCelda(0, 0, 0.9f, 0.3f, 0.3f);
-        dibujarCelda(1, 0, 0.9f, 0.3f, 0.3f);
-        dibujarTriangulo(0.4f, 0.5f, 0.6f, 0.5f, 0.5f, 0.65f, 0.2f, 0.8f, 0.4f);
-        dibujarLinea(0.3f, 0.2f, 0.8f, 0.2f, 1.0f, 1.0f, 1.0f);
-        dibujarPunto(BOARD_X0, BOARD_Y0, 8.0f, 1.0f, 0.9f, 0.1f);
+        actualizarJuego(glfwGetTime());          // caída automática
+
+        dibujarCuadricula(0.35f, 0.38f, 0.42f);  // tablero (Persona 1)
+        dibujarJuego();                          // piezas (Persona 2)
+        // dibujarPanel();                       // panel derecho (Persona 3)
+        dibujarPunto(BOARD_X0, BOARD_Y0, 8.0f, 1.0f, 0.9f, 0.1f); // GL_POINTS: esquina del tablero
 
         glfwSwapBuffers(w);
         glfwPollEvents();
