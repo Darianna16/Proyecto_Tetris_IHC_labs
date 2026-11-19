@@ -1,15 +1,3 @@
-// =====================================================================
-//  panel.cpp  -  Panel lateral de estado y control (Persona 3)
-//
-//  Elementos (de arriba hacia abajo, todos en coordenadas normalizadas):
-//    1. Vista previa de la siguiente pieza (recuadro con GL_LINES)
-//    2. Puntaje con display de 7 segmentos (rectángulos = GL_TRIANGLES)
-//    3. Barra de progreso de líneas hacia el siguiente nivel
-//    4. Nivel actual con puntos (GL_POINTS)
-//    5. Indicador de estado: círculo verde / amarillo / rojo
-//    6. Botones de Pausa (P) y Reiniciar (R) con íconos triangulares
-//  Además: marco del tablero del color del estado y aviso de pausa.
-// =====================================================================
 #include "panel.h"
 #include "juego.h"
 #define GLFW_INCLUDE_NONE
@@ -18,7 +6,6 @@
 
 // ---------- Paleta de la interfaz ----------
 // Fondo de la ventana: (0.10, 0.12, 0.15). El panel es un poco más claro
-// para agruparlo visualmente; los estados usan el código de semáforo.
 static const float PANEL[3]    = {0.15f, 0.17f, 0.21f};  // fondo del panel
 static const float MARCO[3]    = {0.45f, 0.48f, 0.53f};  // bordes neutros
 static const float BOTON[3]    = {0.25f, 0.28f, 0.33f};  // botón en reposo
