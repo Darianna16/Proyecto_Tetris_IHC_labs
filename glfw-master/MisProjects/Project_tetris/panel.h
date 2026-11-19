@@ -1,8 +1,3 @@
-// =====================================================================
-//  panel.h  -  Panel lateral de estado y control (Persona 3)
-//  main.cpp llama a dibujarPanel() en cada frame y a panelTecla()
-//  desde el callback de teclado.
-// =====================================================================
 #pragma once
 
 void dibujarPanel();          // dibuja todo el panel derecho y el marco del tablero

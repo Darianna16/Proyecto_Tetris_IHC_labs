@@ -1,8 +1,3 @@
-// =====================================================================
-//  juego.cpp  -  Lógica del Tetris (Persona 2)
-//  Piezas y rotaciones, colisiones, caída automática, fijar piezas,
-//  borrar filas, game over y teclas de movimiento.
-// =====================================================================
 #include "juego.h"
 #define GLFW_INCLUDE_NONE  // no necesitamos OpenGL aquí, solo las teclas
 #include <GLFW/glfw3.h>   // solo para las constantes GLFW_KEY_* y GLFW_PRESS

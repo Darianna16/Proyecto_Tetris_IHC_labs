@@ -46,7 +46,7 @@ void setTransform(float x, float y, float w, float h) {
     glUniform2f(locPos, x, y); glUniform2f(locSize, w, h);
 }
 
-// ---------- Funciones de dibujo (API para Persona 2 y 3) ----------
+// ---------- Funciones de dibujo ----------
 // (x, y) = esquina inferior izquierda; todo en coordenadas normalizadas
 void dibujarCuadrado(float x, float y, float w, float h, float r, float g, float b) {
     setColor(r, g, b); setTransform(x, y, w, h);
@@ -185,9 +185,9 @@ int main() {
 
         actualizarJuego(glfwGetTime());          // caída automática
 
-        dibujarCuadricula(0.35f, 0.38f, 0.42f);  // tablero (Persona 1)
-        dibujarJuego();                          // piezas (Persona 2)
-        dibujarPanel();                          // panel derecho (Persona 3)
+        dibujarCuadricula(0.35f, 0.38f, 0.42f);  // tablero 
+        dibujarJuego();                          // piezas 
+        dibujarPanel();                          // panel derecho 
         dibujarPunto(BOARD_X0, BOARD_Y0, 8.0f, 1.0f, 0.9f, 0.1f); // GL_POINTS: esquina del tablero
 
         glfwSwapBuffers(w);

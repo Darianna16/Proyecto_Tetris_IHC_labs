@@ -1,10 +1,3 @@
-// =====================================================================
-//  juego.h  -  Lógica del Tetris (Persona 2)
-//  Variables y funciones COMPARTIDAS por todo el equipo:
-//    - Persona 1 (main.cpp) llama a iniciarJuego(), actualizarJuego()
-//      y dibujarJuego() dentro del bucle de renderizado.
-//    - Persona 3 (panel) lee 'estado' y 'siguientePieza' y usa COLORES.
-// =====================================================================
 #pragma once
 
 // ---------- Constantes del tablero (antes estaban en main.cpp) ----------
