@@ -141,14 +141,14 @@ static void dibujarIndicador() {
 }
 
 // ---------- 6. Botones ----------
-static void iconoPausa(float cx, float cy, const float* c) {        // ▌▌
+static void iconoPausa(float cx, float cy, const float* c) {
     rect(cx - 0.045f, cy - 0.04f, 0.03f, 0.08f, c);
     rect(cx + 0.015f, cy - 0.04f, 0.03f, 0.08f, c);
 }
-static void iconoPlay(float cx, float cy, const float* c) {         // ▶
+static void iconoPlay(float cx, float cy, const float* c) { 
     tri(cx - 0.035f, cy - 0.045f, cx - 0.035f, cy + 0.045f, cx + 0.05f, cy, c);
 }
-static void iconoReiniciar(float cx, float cy, const float* c) {    // ▌◀
+static void iconoReiniciar(float cx, float cy, const float* c) {
     rect(cx - 0.06f, cy - 0.045f, 0.02f, 0.09f, c);
     tri(cx - 0.035f, cy, cx + 0.05f, cy + 0.045f, cx + 0.05f, cy - 0.045f, c);
 }
