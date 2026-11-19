@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "juego.h"   // constantes del tablero + lógica del juego (Persona 2)
+#include "panel.h"   // panel lateral de estado y control (Persona 3)
 
 // ---------- Shaders ----------
 const char* vsSrc = R"(#version 330 core
@@ -137,6 +138,7 @@ void teclado(GLFWwindow* w, int key, int scancode, int action, int mods) {
         if (key == GLFW_KEY_P && estado != GAMEOVER)
             estado = (estado == JUGANDO) ? PAUSA : JUGANDO;
         if (key == GLFW_KEY_R) reiniciarJuego();
+        panelTecla(key);                           // destello del botón P o R
     }
 }
 
@@ -185,7 +187,7 @@ int main() {
 
         dibujarCuadricula(0.35f, 0.38f, 0.42f);  // tablero (Persona 1)
         dibujarJuego();                          // piezas (Persona 2)
-        // dibujarPanel();                       // panel derecho (Persona 3)
+        dibujarPanel();                          // panel derecho (Persona 3)
         dibujarPunto(BOARD_X0, BOARD_Y0, 8.0f, 1.0f, 0.9f, 0.1f); // GL_POINTS: esquina del tablero
 
         glfwSwapBuffers(w);
